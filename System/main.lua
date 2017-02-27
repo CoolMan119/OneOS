@@ -77,8 +77,8 @@ function Initialise()
 	        if time >= 13 then
 	            time = time - 12
 	        end
-		    local nHour = math.floor(time)
-		    local nMinute = math.floor((time - nHour)*60)
+		    local nHour = math.floor(os.time())
+		    local nMinute = math.floor((os.time() - nHour)*60)
 			clock.Text = string.format( "%d:%02d %s", nHour, nMinute, sTOD )
 		end
 		-- bedrock:StartRepeatingTimer(updateClock, 5/6)
